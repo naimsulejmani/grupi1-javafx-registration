@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="dev.naimsulejmani.grupi1javafxregistration.MainController"
+            prefHeight="400.0" prefWidth="600.0" alignment="CENTER">
+
+    <columnConstraints>
+        <ColumnConstraints percentWidth="20"/>
+        <ColumnConstraints percentWidth="60"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="35"/>
+        <RowConstraints minHeight="35"/>
+        <RowConstraints minHeight="35"/>
+        <RowConstraints minHeight="35"/>
+        <RowConstraints minHeight="35"/>
+        <RowConstraints minHeight="35"/>
+    </rowConstraints>
+
+    <Label GridPane.rowIndex="0"/>
+    <Label text="Name" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfName" promptText="Enter Name here" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label text="Surname" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfSurname" promptText="Enter Surname here" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <Label text="Birthdate" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <DatePicker fx:id="dpBirthdate" promptText="Enter Birthdate here" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+
+    <CheckBox fx:id="chbPassive" text="Is Passive" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+    <Label GridPane.rowIndex="5"/>
+
+    <Button fx:id="btnSave" text="Save" GridPane.rowIndex="6" onAction="#registerForm"/>
+    <Button fx:id="btnReset" text="Reset" GridPane.rowIndex="6" GridPane.columnIndex="1"
+    onAction="#resetForm"/>
+
+    <ListView fx:id="personLists" GridPane.rowIndex="7" GridPane.columnSpan="2"/>
+
+    <TableView fx:id="tvPersons" GridPane.rowIndex="8" GridPane.columnSpan="2"/>
+
+
+
+</GridPane>
